@@ -1,0 +1,16 @@
+.right {
+    float: right;
+}
+
+.center {
+    text-align: center;
+    text-indent: 20px;
+    line-height: 20px;
+}
+
+.scroll {
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+
