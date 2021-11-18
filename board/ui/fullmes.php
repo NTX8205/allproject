@@ -1,5 +1,5 @@
 <?php
-include("C:/xampp/htdocs/project/status/function.php");
+include("C:/xampp/htdocs/allproject/board/status/function.php");
 $id = $_GET["id"];
 $sql = "SELECT * FROM `mesboard` WHERE id = '$id'";
 $result = mysqli_query($link, $sql) or die('MySQL query error');

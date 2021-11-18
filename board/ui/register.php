@@ -1,5 +1,5 @@
 <?php
-    include("C:/xampp/htdocs/project/status/account.php");
+    include("C:/xampp/htdocs/allproject/board/status/function.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

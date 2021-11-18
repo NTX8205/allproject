@@ -43,7 +43,7 @@
                 if ($id != null && $pw != null && $row[0] == $id && $row[1] == $pw) {
                   $_SESSION['username'] = $id;
                     echo '登入成功!';
-                    header("location:/project/ui/index.php");
+                    header("location:/allproject/board/ui/index.php");
                     return true;
                     mysqli_close($this->link);
                 }
@@ -59,7 +59,7 @@
             $sql = "INSERT INTO `user` (`account`, `password`) VALUES ('$_POST[username]','$_POST[pw]')";
             
             if (mysqli_query($this->link, $sql)) {
-                header("location:/project/ui/login.php");
+                header("location:/board/ui/login.php");
                 return true;
                 
             } 
@@ -80,7 +80,7 @@
                 unset( $_SESSION['username']);
                 
             }
-            header("location:/project/ui/index.php");
+            header("location:/allproject/board/ui/index.php");
         }
 
 

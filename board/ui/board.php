@@ -1,5 +1,5 @@
 <?php
-include("C:/xampp/htdocs/project/status/function.php");
+include("C:/xampp/htdocs/allproject/board/status/function.php");
 
 if (isset($_SESSION['username'])) {
 } else {

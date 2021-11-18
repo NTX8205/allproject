@@ -50,7 +50,7 @@ class Message{
 
         $sql = "INSERT INTO `mesboard`(`mesUser`, `title`,`messages`) VALUES ('$_SESSION[username]','$_POST[title]','$_POST[content]')"; 
 
-        header("location:/project/ui/index.php");
+        header("location:/allproject/board/ui/index.php");
 
         if (mysqli_query($this->link, $sql)) {
            return true; 
@@ -63,7 +63,7 @@ class Message{
 
     function editMessage(){
         $sql = "UPDATE `mesboard` SET `title` = '$_POST[title]', `messages` = '$_POST[content]' WHERE `mesboard`.`id` = '$_POST[id]'";
-        header("location:/project/ui/index.php");
+        header("location:/allproject/board/ui/index.php");
         if (mysqli_query($this->link, $sql)) {
            return true; 
         } 
@@ -77,7 +77,7 @@ class Message{
 
     function deleteMessage(){
         $sql = "DELETE FROM mesboard WHERE id="."$_GET[id]";
-        header("location:/project/ui/index.php");
+        header("location:/allproject/board/ui/index.php");
         if (mysqli_query($this->link, $sql)) {
             return true;
             
@@ -106,7 +106,7 @@ class Respond {
     
     function respondMessage(){
         $sql = "INSERT INTO `resmesboard`(`resname`, `resmes`,`resid`) VALUES ('$_SESSION[username]','$_POST[content]','$_POST[id]')";
-        header("location:/project/ui/fullmes.php?id=".$_POST['id']);
+        header("location:/allproject/board/ui/fullmes.php?id=".$_POST['id']);
         if (mysqli_query($this->link, $sql)) {
            return true; 
         } 
@@ -120,7 +120,7 @@ class Respond {
     function deleteresMessage()
     {
         $sql = "DELETE FROM `resmesboard` WHERE `resmesboard`.`id` ="."$_GET[id]";
-        header("location:/project/ui/fullmes.php?id=" . $_GET["mesid"]);
+        header("location:/allproject/board/ui/fullmes.php?id=" . $_GET["mesid"]);
         if (mysqli_query($this->link, $sql)) {
             return true;
         } else {
@@ -135,7 +135,7 @@ class Respond {
         $sql = "UPDATE `resmesboard` SET `resmes` = '$_POST[content]' WHERE `resmesboard`.`id` = '$_POST[id]'";
         $sql1 = "SELECT * FROM `resmesboard` WHERE `resmesboard`.`id` = '$_POST[id]'";
         //$result1 = mysqli_query($link, $sql1) or die('MySQL query error');
-        header("location:/project/ui/fullmes.php?id=" . $_GET["mesid"]);
+        header("location:/allproject/board/ui/fullmes.php?id=" . $_GET["mesid"]);
         if (mysqli_query($this->link, $sql)) {
             
             return true;
