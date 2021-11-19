@@ -1,15 +1,9 @@
 <?php
-
-$file = fopen("./ex/count.txt","r") or die("failed");
-if(is_readable("./ex/count.txt")){
-    $update = "./ex/count.txt";
-    $plus=(int)file_get_contents($update)+1;
-    $count = file_put_contents("./ex/count.txt",$plus);
-
-}
+$filename = "./ex/count.txt";
+$file = fopen($filename,"r") or die("failed");
+$plus=(int)file_get_contents($filename)+1;
+$count = file_put_contents($filename,$plus);
 echo "瀏覽人數:";
-echo fread($file,filesize("./ex/count.txt"));
-
-
+echo fread($file,filesize($filename));
 fclose($file);
 ?>
