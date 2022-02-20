@@ -43,7 +43,7 @@
         }
 
         function edit($id){
-            $sql = "UPDATE `mes` SET `name` = '$_POST[user]', `messagers` = '$_POST[messages]' WHERE `mesboard`.`id` = '$id'";
+            $sql = "UPDATE `mes` SET `name` = '$_POST[user]', `messagers` = '$_POST[messages]' WHERE `mes`.`id` = '$id'";
             header("location:board.php");
             if (mysqli_query($this->connect, $sql)) {
                 return true;

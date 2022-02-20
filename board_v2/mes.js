@@ -4,10 +4,4 @@ $(document).ready(function () {
         $("#content").val("");
         
     });
-
-    function getid(num){
-        console.log(num)
-        document.getElementById("edtid").value=num;
-
-    }
 });

@@ -45,8 +45,7 @@ if ($result = mysqli_query($connect, $sql)) {
                                     <h5 class="card-title"id="user">' . $row["name"] . '</h5>
                                     <p class="card-text" id="mes">' . $row["messagers"] . '</p>
                                     <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
-                                        <button type="button" class="btn btn-outline-warning" id="edit" name="method" value="edit" "onclick="getid('.$row["id"].')" data-bs-toggle="modal" data-bs-target="#editmes">編輯</button>
-                                        <input type="hidden" id="edtid" name="id" value="' . $row["id"] . '">
+                                        <a href="edit.php?id=' . $row["id"] . '"class=\' btn btn-outline-warning value=edit\'>編輯</a>
                                         <button type="submit" class="btn btn-outline-danger" id="del" name="method" value="del">刪除</button>
                                         <input type="hidden" id="delid" name="id" value="' . $row["id"] . '">
                                     </div>
@@ -107,7 +106,7 @@ if ($result = mysqli_query($connect, $sql)) {
                             <div class="mb-3">
                                 <input type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" value="關閉" id="close">
                                 <button type="submit" class="btn btn-outline-success" name="method" value="edit">編輯</button>
-                                <input type="hidden" id="edtid" name="id" value="">
+                                <input type="hidden" id="edtidm" name="id" value="">
                             </div>
                         </form>
                     </div>
