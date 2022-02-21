@@ -27,7 +27,7 @@ $row = mysqli_fetch_array($result);
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <h2>留言板</h2>
+                <h2>編輯留言</h2>
             </a>
         </div>
     </nav>
