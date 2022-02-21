@@ -61,6 +61,9 @@
                 <a class="dropdown-item" href="./extest/index.html">人數</a>
               </li>
               <li>
+                <a class="dropdown-item" href="./test/ex/test.php">測試</a>
+              </li>
+              <li>
                 <a class="dropdown-item" href="./test/index.php">個人網頁</a>
               </li>
             </ul>
