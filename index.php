@@ -37,6 +37,9 @@
                 <a class="dropdown-item" href="./board/ui/index.php">留言板</a>
               </li>
               <li>
+                <a class="dropdown-item" href="./board_v2/board.php">留言板V2</a>
+              </li>
+              <li>
                 <a class="dropdown-item" href="./board/example/pdo.php">測試(pdo連線)</a>
               </li>
               <li>
