@@ -59,7 +59,7 @@ if ($result = mysqli_query($connect, $sql)) {
             echo "<h4 style='text-align: center;'>沒有留言</h4>";
         }
         ?>
-
+    </div>
 
         <div class="modal fade" id="newmes" tabindex="-1" aria-labelledby="message" aria-hidden="true">
             <div class="modal-dialog">
@@ -113,7 +113,6 @@ if ($result = mysqli_query($connect, $sql)) {
                 </div>
             </div>
         </div>
-
 </body>
 
 </html>
