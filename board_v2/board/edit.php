@@ -32,7 +32,7 @@ $row = mysqli_fetch_array($result);
         </div>
     </nav>
     <div class=" container-fluid">
-        <form action="/allproject/board_v2/function.php" method="post">
+        <form action="/allproject/board_v2/board/function.php" method="post">
             <div class="mb-3">
                 <label class="form-label">名稱</label>
                 <input type="text" class="form-control" id="edtusername" name="user" value="<?php echo $row["name"] ?>">
