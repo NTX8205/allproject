@@ -41,7 +41,7 @@ if ($result = mysqli_query($connect, $sql)) {
             while ($row = mysqli_fetch_assoc($result)) {
                 echo '<div class="card col">
                             <div class="card-body">
-                                <form action="/allproject/board_v2/function.php" method="post">
+                                <form action="/allproject/board_v2/board/function.php" method="post">
                                     <h5 class="card-title"id="user">' . $row["name"] . '</h5>
                                     <p class="card-text" id="mes">' . $row["messagers"] . '</p>
                                     <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
@@ -56,7 +56,7 @@ if ($result = mysqli_query($connect, $sql)) {
             }
             echo '</div>';
         } else {
-            echo "<h4 style='text-align: center;'>沒有留言</h4>";
+            echo "<h4 style='text-align: center;'>目前沒有留言</h4>";
         }
         ?>
     </div>
@@ -69,7 +69,7 @@ if ($result = mysqli_query($connect, $sql)) {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="/allproject/board_v2/function.php" method="post">
+                    <form action="/allproject/board_v2/board/function.php" method="post">
                         <div class="mb-3">
                             <input type="text" class="form-control" id="username" name="user" placeholder="名稱">
                         </div>
@@ -95,7 +95,7 @@ if ($result = mysqli_query($connect, $sql)) {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="/allproject/board_v2/function.php" method="post">
+                    <form action="/allproject/board_v2/board/function.php" method="post">
                         <div class="mb-3">
                             <input type="text" class="form-control" id="edtusername" name="user" value="">
                         </div>
