@@ -66,6 +66,9 @@
               <li>
                 <a class="dropdown-item" href="./test/index.php">個人網頁</a>
               </li>
+              <li>
+                <a class="dropdown-item" href="./Guestbook/index.php">php工作坊</a>
+              </li>
             </ul>
           </li>
         </ul>
