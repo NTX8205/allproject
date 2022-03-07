@@ -35,30 +35,30 @@ if ($result = mysqli_query($connect, $sql)) {
     </div>
 
     <div class="mesboard container">
-        <?php
-        if ($rowcount > 0) {
-            echo '<div class="row row-cols-3">';
-            while ($row = mysqli_fetch_assoc($result)) {
-                echo '<div class="card col">
-                            <div class="card-body">
-                                <form action="/allproject/board_v2/board/function.php" method="post">
-                                    <h5 class="card-title"id="user">' . $row["name"] . '</h5>
-                                    <p class="card-text" id="mes">' . $row["messagers"] . '</p>
-                                    <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
-                                        <a href="edit.php?id=' . $row["id"] . '"class=\' btn btn-outline-warning value=edit\'>編輯</a>
-                                        <button type="submit" class="btn btn-outline-danger" id="del" name="method" value="del">刪除</button>
-                                        <input type="hidden" id="delid" name="id" value="' . $row["id"] . '">
-                                    </div>
-                                </form>
-                            </div>
-                            </div>
-                        ';
-            }
-            echo '</div>';
-        } else {
-            echo "<h4 style='text-align: center;'>目前沒有留言</h4>";
-        }
-        ?>
+        
+        <?php if ($rowcount > 0) { ?>
+        <div class="row row-cols-3">
+        <?php  while ($row = mysqli_fetch_assoc($result)) { ?>
+            <div class="card col">
+                <div class="card-body">
+                    <form action="/allproject/board_v2/board/function.php" method="post">
+                        <h5 class="card-title"id="user"><?php echo $row["name"] ?></h5>
+                        <p class="card-text" id="mes"><?php echo $row["messagers"] ?></p>
+                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
+                            <a href="edit.php?id=<?php echo $row["id"] ?>"class=" btn btn-outline-warning value=edit">編輯</a>
+                            <button type="submit" class="btn btn-outline-danger" id="del" name="method" value="del">刪除</button>
+                            <input type="hidden" id="delid" name="id" value="<?php echo $row["id"] ?>">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        <?php    } ?>
+            </div>
+        <?php } else { ?>
+            <h4 style='text-align: center;'>目前沒有留言</h4>
+        <?php } ?>
+        
     </div>
 
     <div class="modal fade" id="newmes" tabindex="-1" aria-labelledby="message" aria-hidden="true">
