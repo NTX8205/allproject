@@ -59,7 +59,7 @@
             $sql = "INSERT INTO `user` (`account`, `password`) VALUES ('$_POST[username]','$_POST[pw]')";
             
             if (mysqli_query($this->link, $sql)) {
-                header("location:/board/ui/login.php");
+                header("location:/allproject/board/ui/login.php");
                 return true;
                 
             } 

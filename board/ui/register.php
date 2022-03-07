@@ -1,5 +1,5 @@
 <?php
-    include("C:/xampp/htdocs/allproject/board/status/function.php");
+    include("C:/xampp/htdocs/allproject/board/status/account.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +27,7 @@
         <div class="container mt-3">
             <div class="card">
                 <div class="card-body">
-                    <form action="../status/account.php?id=res" method="POST">
+                    <form action=".././status/account.php?id=res" method="POST">
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">帳號 :</span>
