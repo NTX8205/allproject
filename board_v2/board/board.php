@@ -56,7 +56,7 @@ if ($result = mysqli_query($connect, $sql)) {
                 <?php    } ?>
             </div>
         <?php } else { ?>
-            <h4 style='text-align: center;'>目前沒有留言</h4>
+            <h2 class="alert" style='text-align: center;'>目前沒有留言</h2>
         <?php } ?>
 
     </div>
