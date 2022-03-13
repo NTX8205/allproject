@@ -1,10 +1,11 @@
 <?php
 
-include("connect.php");
-$sql = "SELECT * FROM `mes` ORDER BY id ASC";
-if ($result = mysqli_query($connect, $sql)) {
-    $rowcount = mysqli_num_rows($result);
-}
+include("../connect.php");
+$query = "SELECT * FROM mes";
+
+$result = $pdo->query($query);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +18,7 @@ if ($result = mysqli_query($connect, $sql)) {
     <link href="/allproject/board_v2/mes.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="/allproject/board_v2/mes.js"></script>
+    <script src="/allproject/board_v2/board/mes.js"></script>
     <title>留言板</title>
 </head>
 
@@ -36,9 +37,9 @@ if ($result = mysqli_query($connect, $sql)) {
 
     <div class="mesboard container">
 
-        <?php if ($rowcount > 0) { ?>
+        <?php if ($result->fetch() > 0) { ?>
             <div class="row row-cols-3">
-                <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+                <?php while ($row = $result->fetch()) { ?>
                     <div class="card col">
                         <div class="card-body">
                             <form action="/allproject/board_v2/board/function.php" method="post">

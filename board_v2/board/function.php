@@ -1,69 +1,51 @@
 <?php
-    require("connect.php");
+    require_once("../connect.php");
 
     $_POST["method"]=isset($_POST["method"]) ? $_POST["method"] : null;
     $_POST["id"]=isset($_POST["id"]) ? $_POST["id"] : null;
     $fun = $_POST["method"];
     $id = $_POST["id"];
+    $user = $_POST["user"];
+    $mes = $_POST["messages"];
 
-    $method = new messageMethod($connect);
+    
 
     switch($fun){
         case "add":
-            $method->add();
+            add($pdo);
             break;
         case "edit":
-            $method->edit($id);
+            edit($id,$pdo);
             break;
         case "del":
-            $method->delete($id);
+            delete($id,$pdo);
             break;
         default:
             echo "no";
         break;
     }
 
-    class messageMethod{
-
-        function __construct($connect)
-        {
-            $this->connect=$connect;
-        }
-
-        function add(){
-            $sql = "INSERT INTO `mes` (`name`, `messagers`) VALUES ('$_POST[user]', '$_POST[messages]')";
-            header("location:board.php");
-
-            if (mysqli_query($this->connect, $sql)) {
-                return true;
-            } else {
-                return false;
-            }
-            mysqli_close($this->connect);
-        }
-
-        function edit($id){
-            $sql = "UPDATE `mes` SET `name` = '$_POST[user]', `messagers` = '$_POST[messages]' WHERE `mes`.`id` = '$id'";
-            header("location:board.php");
-            if (mysqli_query($this->connect, $sql)) {
-                return true;
-            } else {
-                return false;
-            }
-            mysqli_close($this->connect);
-        }
-        
-        function delete($id){
-            $sql = "DELETE FROM mes WHERE id=" . "$id";
-            header("location:board.php");
-            if (mysqli_query($this->connect, $sql)) {
-                return true;
-            } else {
-                return false;
-            }
-
-            mysqli_close($this->connect);
-        }
-
+    function add($pdo){
+        $query ="INSERT INTO `mes` (`name`, `messagers`) VALUES ('$_POST[user]', '$_POST[messages]')";
+        $pdo->query($query);
+        header("location:board.php");
     }
+    
+    function delete($id,$pdo){
+        $query = "DELETE FROM mes WHERE id=" . "$id";
+        $pdo->query($query);
+        header("location:board.php");
+        
+    }
+
+    function edit($id,$pdo){
+        $query = "UPDATE `mes` SET `name` = '$_POST[user]', `messagers` = '$_POST[messages]' WHERE `mes`.`id` = '$id'";
+        $pdo->query($query);
+        header("location:board.php");
+        
+    }
+
+    
+    
+        
 ?>

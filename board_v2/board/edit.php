@@ -1,10 +1,10 @@
 <?php
 
-include("connect.php");
+include("../connect.php");
 $id = $_GET["id"];
-$sql = "SELECT * FROM `mes` WHERE id = '$id'";
-$result = mysqli_query($connect, $sql) or die('MySQL query error');
-$row = mysqli_fetch_array($result);
+$query = "SELECT * FROM `mes` WHERE id = '$id'";
+$result = $pdo->query($query);
+$row = $result->fetch();
 
 ?>
 
