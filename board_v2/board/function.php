@@ -5,8 +5,6 @@
     $_POST["id"]=isset($_POST["id"]) ? $_POST["id"] : null;
     $fun = $_POST["method"];
     $id = $_POST["id"];
-    $user = $_POST["user"];
-    $mes = $_POST["messages"];
 
     
 
