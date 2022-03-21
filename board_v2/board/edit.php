@@ -35,7 +35,7 @@ $row = $result->fetch();
         <form action="/allproject/board_v2/board/function.php" method="post">
             <div class="mb-3">
                 <label class="form-label">名稱</label>
-                <input type="text" class="form-control" id="edtusername" name="user" value="<?php echo $row["name"] ?>">
+                <input type="text" class="form-control" id="edttitle" name="user" value="<?php echo $row["title"] ?>">
             </div>
             <div class="mb-3">
                 <label class="form-label">內容</label>

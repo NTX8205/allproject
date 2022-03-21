@@ -23,11 +23,24 @@ $result = $pdo->query($query);
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <h2>留言板</h2>
+                <h3>留言板</h3>
             </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/allproject/board_v2/userdata/login.php">登入</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/allproject/board_v2/userdata/register.php">註冊</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -36,29 +49,24 @@ $result = $pdo->query($query);
     </div>
 
     <div class="mesboard container">
-
-        <?php if ($result->fetch() > 0) { ?>
-            <div class="row row-cols-3">
-                <?php while ($row = $result->fetch()) { ?>
-                    <div class="card col">
-                        <div class="card-body">
-                            <form action="/allproject/board_v2/board/function.php" method="post">
-                                <h5 class="card-title" id="user"><?php echo $row["name"] ?></h5>
-                                <p class="card-text" id="mes"><?php echo $row["messagers"] ?></p>
-                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
-                                    <a href="edit.php?id=<?php echo $row["id"] ?>" class=" btn btn-outline-warning value=edit">編輯</a>
-                                    <button type="submit" class="btn btn-outline-danger" id="del" name="method" value="del">刪除</button>
-                                    <input type="hidden" id="delid" name="id" value="<?php echo $row["id"] ?>">
-                                </div>
-                            </form>
-                        </div>
+        <div class="row row-cols-3">
+            <?php while ($row = $result->fetch()) { ?>
+                <div class="card col">
+                    <div class="card-body">
+                        <form action="/allproject/board_v2/board/function.php" method="post">
+                            <h5 class="card-title" id="user"><?php echo $row["title"] ?></h5>
+                            <p class="card-text" id="mes"><?php echo $row["messagers"] ?></p>
+                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
+                                <a href="edit.php?id=<?php echo $row["id"] ?>" class=" btn btn-outline-warning value=edit">編輯</a>
+                                <button type="submit" class="btn btn-outline-danger" id="del" name="method" value="del">刪除</button>
+                                <input type="hidden" id="delid" name="id" value="<?php echo $row["id"] ?>">
+                            </div>
+                        </form>
                     </div>
+                </div>
 
-                <?php    } ?>
-            </div>
-        <?php } else { ?>
-            <h2 class="alert" style='text-align: center;'>目前沒有留言</h2>
-        <?php } ?>
+            <?php    } ?>
+        </div>
 
     </div>
 
@@ -72,7 +80,7 @@ $result = $pdo->query($query);
                 <div class="modal-body">
                     <form action="/allproject/board_v2/board/function.php" method="post">
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="username" name="user" placeholder="名稱">
+                            <input type="text" class="form-control" id="title" name="title" placeholder="標題">
                         </div>
                         <div class="mb-3">
                             <textarea class="form-control" id="content" name="messages" rows="3" placeholder="輸入內容"></textarea>
@@ -80,7 +88,7 @@ $result = $pdo->query($query);
 
                         <div class="mb-3">
                             <input type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" value="關閉" id="close"></input>
-                            <button type="submit" class="btn btn-outline-success" name="method" value="add">新增</input>
+                            <button type="submit" class="btn btn-outline-success" name="method" value="add">新增</button>
                         </div>
                     </form>
                 </div>
@@ -98,7 +106,7 @@ $result = $pdo->query($query);
                 <div class="modal-body">
                     <form action="/allproject/board_v2/board/function.php" method="post">
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="edtusername" name="user" value="">
+                            <input type="text" class="form-control" id="edttitle" name="title" value="">
                         </div>
                         <div class="mb-3">
                             <textarea class="form-control" id="edtcontent" name="messages" rows="3"></textarea>

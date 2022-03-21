@@ -15,35 +15,36 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">登入</a>
+            <a class="navbar-brand" href="#">
+                <h3>登入</h3>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/allproject/board_v2/board/board.php">留言板</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/allproject/board_v2/userdata/register.php">註冊</a>
+                        <a class="nav-link active" href="/allproject/board_v2/userdata/register.php">註冊</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <div class="container-fluid mid">
-        <form action="" method="post">
+        <form action="methop.php" method="post">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">帳號</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="輸入帳號">
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="輸入帳號" name="user" value="" require>
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">密碼</label>
-                <input type="password" class="form-control" placeholder="輸入密碼" require>
+                <input type="password" class="form-control" placeholder="輸入密碼" name="password" value="" require>
             </div>
             <div class="mb-3">
-                <input type="submit" class="btn btn-outline-info" value="登入">
-            </div>
+                <button type="submit" class="btn btn-outline-info" name="method" value="login">登入</button>
         </form>
     </div>
 

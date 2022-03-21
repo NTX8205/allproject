@@ -24,7 +24,7 @@
     }
 
     function add($pdo){
-        $query ="INSERT INTO `mes` (`name`, `messagers`) VALUES ('$_POST[user]', '$_POST[messages]')";
+        $query ="INSERT INTO `mes` (`title`, `messagers`) VALUES ('$_POST[title]', '$_POST[messages]')";
         $pdo->query($query);
         header("location:board.php");
     }
@@ -37,7 +37,7 @@
     }
 
     function edit($id,$pdo){
-        $query = "UPDATE `mes` SET `name` = '$_POST[user]', `messagers` = '$_POST[messages]' WHERE `mes`.`id` = '$id'";
+        $query = "UPDATE `mes` SET `title` = '$_POST[user]', `messagers` = '$_POST[messages]' WHERE `mes`.`id` = '$id'";
         $pdo->query($query);
         header("location:board.php");
         

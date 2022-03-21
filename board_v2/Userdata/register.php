@@ -15,24 +15,24 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">登入</a>
+            <a class="navbar-brand" href="#"><h3>註冊</h3></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/allproject/board_v2/board/board.php">留言板</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/allproject/board_v2/userdata/register.php">註冊</a>
+                        <a class="nav-link active" href="/allproject/board_v2/userdata/login.php">登入</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <div class="container-fluid mid">
-        <form action="" method="post">
+        <form action="method.php" method="post">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">帳號</label>
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="輸入帳號">
@@ -42,7 +42,7 @@
                 <input type="password" class="form-control" placeholder="輸入密碼" require>
             </div>
             <div class="mb-3">
-                <input type="submit" class="btn btn-outline-info" value="登入">
+                <button type="submit" class="btn btn-outline-info" name="method" value="register">註冊</button>
             </div>
         </form>
     </div>
