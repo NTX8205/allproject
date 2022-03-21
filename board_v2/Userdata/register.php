@@ -35,11 +35,11 @@
         <form action="method.php" method="post">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">帳號</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="輸入帳號">
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="輸入帳號" name="user" value="" require>
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">密碼</label>
-                <input type="password" class="form-control" placeholder="輸入密碼" require>
+                <input type="password" class="form-control" placeholder="輸入密碼" name="password" value="" require>
             </div>
             <div class="mb-3">
                 <button type="submit" class="btn btn-outline-info" name="method" value="register">註冊</button>

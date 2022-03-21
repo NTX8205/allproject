@@ -26,21 +26,21 @@ switch ($fun) {
 
 function register($pdo)
 {
-    $query = "INSERT INTO `user` (`name`, `password`) VALUES ('$_POST[user]', '$_POST[password]')";
+    $query = "INSERT INTO `user` (`user`, `password`) VALUES ('$_POST[user]', '$_POST[password]')";
     $pdo->query($query);
-    header("location:board.php");
+    header("location:/allproject/board_v2/board/board.php");
 }
 
 function login($pdo)
 {
     
-    header("location:board.php");
+    header("location: /allproject/board_v2/board/board.php");
 }
 
 function logout($pdo)
 {
     
-    header("location:board.php");
+    header("location: /allproject/board_v2/board/board.php");
 }
 
 

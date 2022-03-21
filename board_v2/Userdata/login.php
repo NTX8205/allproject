@@ -34,7 +34,7 @@
         </div>
     </nav>
     <div class="container-fluid mid">
-        <form action="methop.php" method="post">
+        <form action="method.php" method="post">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">帳號</label>
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="輸入帳號" name="user" value="" require>
