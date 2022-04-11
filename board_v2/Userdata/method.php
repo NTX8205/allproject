@@ -11,7 +11,7 @@ $id = $_POST["id"];
 
 switch ($fun) {
     case "login":
-        login($id,$pdo);
+        login($id, $pdo);
         break;
     case "register":
         register($pdo);
@@ -33,15 +33,12 @@ function register($pdo)
 
 function login($pdo)
 {
-    
+
     header("location: /allproject/board_v2/board/board.php");
 }
 
 function logout($pdo)
 {
-    
+
     header("location: /allproject/board_v2/board/board.php");
 }
-
-
-?>
