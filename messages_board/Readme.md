@@ -3,11 +3,15 @@
 ---
 
 * ## 留言板功能
+
   * ### 新增 C
+
   * ### 編輯 U
     * 非自己的不能編輯
+
   * ### 刪除 D
     * 非自己的不能刪除
+
   * ### 讀取 R
   * ### 留言回覆
     * +CRUD
@@ -36,9 +40,10 @@
 * [ ] 留言 - 修改
 * [ ] 留言 - 刪除
 
-----
+---
 
 * ## 資料庫屬性
+
   * ### 文章 articles
     * id: unsigned int
     * name: varchar(??)（如果有實做登入才能發文，即可不需要）
@@ -47,6 +52,7 @@
     * created_at: timestamp
     * updated_at: timestamp
     * [FK 外鍵] user_id: unsigned int
+
   * ### 留言 comments
     * id: unsigned int
     * content: text
@@ -54,6 +60,7 @@
     * updated_at: timestamp
     * [FK 外鍵] article_id: unsigned int
     * [FK 外鍵] user_id: unsigned int
+
   * ### 登入系統 users
     * id: unsigned int
     * name: varchar(??)
@@ -62,18 +69,18 @@
       * **不可儲存明碼**
       * 可以使用 [`password_hash("password", PASSWORD_BCRYPT)`](https://www.php.net/manual/en/function.password-hash.php) 方法
 
-----
+---
 
 * ## 畫面自由發揮
   * 看的順眼就行
   * 糾正明顯設計錯誤
 
-----
+---
 
 * ## 資料夾分類
 
-```bash=
-/
+```bash
+
 # 看的見的網頁
 ├── index.php
 ├── article
@@ -106,13 +113,15 @@
 │  └── users.php
 └── library # 獨立的資料庫連接邏輯
    └── database.php
+
 ```
 
-----
+---
 
 <https://hackmd.io/VMNXmnk4SBGktt9j4QhO_Q>
 
 * ## 程式碼規範
+  
   * Class
     * 大寫駝峰式
   * Function
@@ -131,7 +140,8 @@
 
 * ## 範例
 
-```php=
+```php
+
 <?php
 
 namespace Vendor\Package;
@@ -143,9 +153,11 @@ class ClassName
         // method body
     }
 }
+
 ```
 
-```php=
+```php
+
 <?php
 
 namespace Vendor\Package;
@@ -160,9 +172,11 @@ class ClassName
         // method body
     }
 }
+
 ```
 
-```php=
+```php
+
 <?php
 
 if ($expr1) {
@@ -172,34 +186,40 @@ if ($expr1) {
 } else {
     // else body;
 }
+
 ```
 
-```php=
+```php
+
 <?php
 foreach ($iterable as $key => $value) {
     // foreach body
 }
+
 ```
 
-```php=
+```php
+
 <?php
 if ($a === $b) {
     $foo = $bar ?? $a ?? $b;
 } elseif ($a > $b) {
     $foo = $a + $b * $c;
 }
+
 ```
 
-----
+---
 
 * ## GIT
+  
   * branch 用自己名字
   * [七分鐘學會 GitLab](https://rommelhong.medium.com/%E4%B8%83%E5%88%86%E9%90%98%E5%AD%B8%E6%9C%83gitlab-ecdcbcb42b9c)
   * [新增、初始 Repository](https://gitbook.tw/chapters/using-git/init-repository)
   * [2013 iT 邦幫忙鐵人賽 30天精通 Git 版本控管](https://ithelp.ithome.com.tw/users/20004901/ironman/525)
   * [常用 Git 指令介紹](https://hellojs-tw.github.io/git-101/cheat-sheet.html)
 
-----
+---
 ## 功能分工
 
 文章 - 列出 - 蔡侄宇
