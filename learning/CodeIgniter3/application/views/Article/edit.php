@@ -6,7 +6,7 @@
                     <span class="card-header-title h4">修改留言</span>
                 </div>
                 <div class="card-body">
-					 <?php echo validation_errors('<div class="alert alert-warning" role="alert">', '</div>') ?>
+                    <?php echo validation_errors('<div class="alert alert-warning" role="alert">', '</div>') ?>
                     <form action="<?php echo site_url('article/edit/' . $article['id']); ?>" method="POST">
                         <div class="form-group">
                             <label> 標題： </label>

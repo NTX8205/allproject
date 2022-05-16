@@ -20,7 +20,7 @@ class ArticleModel extends CI_Model
 
     public function list()
     {
-        $sql = $this->db->select('id, title, content, timestamp')
+        $sql = $this -> db -> select('id, title, content, timestamp')
             ->from('articles');
         $query = $sql->get();
 
@@ -29,7 +29,7 @@ class ArticleModel extends CI_Model
 
 	public function getArticle($id)
 	{
-		$sql = $this->db->select('id, title, content')
+		$sql = $this -> db -> select('id, title, content')
 			->from('articles')
 			->where('id', $id);
 		$query = $sql->get();
