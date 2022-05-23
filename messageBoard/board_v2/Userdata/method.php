@@ -1,6 +1,6 @@
 <?php
 
-require_once("/xampp/htdocs/allproject/board_v2/connect.php");
+require_once("../connect.php");
 
 $_POST["method"] = isset($_POST["method"]) ? $_POST["method"] : null;
 $_POST["id"] = isset($_POST["id"]) ? $_POST["id"] : null;
@@ -28,17 +28,17 @@ function register($pdo)
 {
     $query = "INSERT INTO `user` (`user`, `password`) VALUES ('$_POST[user]', '$_POST[password]')";
     $pdo->query($query);
-    header("location:/allproject/board_v2/board/board.php");
+    header("location:/allproject/messageBoard/board_v2/board/board.php");
 }
 
 function login($pdo)
 {
 
-    header("location: /allproject/board_v2/board/board.php");
+    header("location: /allproject/messageBoard//board_v2/board/board.php");
 }
 
 function logout($pdo)
 {
 
-    header("location: /allproject/board_v2/board/board.php");
+    header("location: /allproject/messageBoard//board_v2/board/board.php");
 }

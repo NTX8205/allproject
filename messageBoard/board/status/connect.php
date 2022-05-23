@@ -6,7 +6,7 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 
-$link = mysqli_connect("localhost", "root", "", "board") or die("connect error!");
+$link = mysqli_connect("localhost", "root", "", "per_board") or die("connect error!");
 
 
 ?>

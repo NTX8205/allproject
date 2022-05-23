@@ -1,5 +1,5 @@
 <?php
-include("C:/xampp/htdocs/allproject/board/status/function.php");
+include("C:/xampp/htdocs/allproject/messageBoard/board/status/function.php");
 $search = $_POST["search"];
 ?>
 

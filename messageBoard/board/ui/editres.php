@@ -1,5 +1,5 @@
 <?php
-include("C:/xampp/htdocs/allproject/board/status/function.php");                                                  
+include("C:/xampp/htdocs/allproject/messageBoard/board/status/function.php");                                                  
 $id = $_GET["id"];
 $mesid = $_GET["op"];                                             
 $sql = "SELECT * FROM `resmesboard` WHERE id = '$id'";

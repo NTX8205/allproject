@@ -1,9 +1,9 @@
 <?php
-include("C:/xampp/htdocs/allproject/board/status/function.php");
+include("C:/xampp/htdocs/allproject/messageBoard/board/status/function.php");
 
 if (isset($_SESSION['username'])) {
 } else {
-    header("location:/project/ui/login.php");
+    header("location:/allproject/messageBoard/board/ui/login.php");
 }
 
 ?>

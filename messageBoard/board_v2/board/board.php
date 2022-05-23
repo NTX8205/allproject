@@ -16,12 +16,12 @@ $result = $pdo->query($query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="/allproject/board_v2/mes.css" rel="stylesheet">
+    <link href="mes.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
-    <script src="/allproject/board_v2/board/mes.js"></script>
+    <script src="mes.js"></script>
     <title>留言板</title>
 </head>
 
@@ -39,10 +39,10 @@ $result = $pdo->query($query);
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page"
-                            href="/allproject/board_v2/userdata/login.php">登入</a>
+                            href="../Userdata/login.php">登入</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/allproject/board_v2/userdata/register.php">註冊</a>
+                        <a class="nav-link active" href="../Userdata/register.php">註冊</a>
                     </li>
                 </ul>
             </div>
@@ -59,7 +59,7 @@ $result = $pdo->query($query);
             <?php while ($row = $result->fetch()) { ?>
             <div class="card col">
                 <div class="card-body">
-                    <form action="/allproject/board_v2/board/function.php" method="post">
+                    <form action="function.php" method="post">
                         <h5 class="card-title" id="user"><?php echo $row["title"] ?></h5>
                         <p class="card-text" id="mes"><?php echo $row["messagers"] ?></p>
                         <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
@@ -86,7 +86,7 @@ $result = $pdo->query($query);
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="/allproject/board_v2/board/function.php" method="post">
+                    <form action="function.php" method="post">
                         <div class="mb-3">
                             <input type="text" class="form-control" id="title" name="title" placeholder="標題">
                         </div>
@@ -114,7 +114,7 @@ $result = $pdo->query($query);
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="/allproject/board_v2/board/function.php" method="post">
+                    <form action="function.php" method="post">
                         <div class="mb-3">
                             <input type="text" class="form-control" id="edttitle" name="title" value="">
                         </div>
