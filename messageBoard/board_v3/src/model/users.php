@@ -1,9 +1,9 @@
 <?php
 
-    namespace App\Model;
+namespace App\Model;
 
-    use App\Config\Database;
-    use PDO;
+use App\Config\Database;
+use PDO;
 
 class User
 {
@@ -19,13 +19,12 @@ class User
         $db->query("SET NAMES UTF8");
         return $db;
     }
-    public function userLogin($email): array
+    public function userLogin($email)
     {
         $db = $this->dbConnect();
         $statement = $db->prepare("SELECT * FROM users WHERE email=?");
         $statement->execute([$email]);
-
-        return $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $statement->fetch(PDO::FETCH_ASSOC);
     }
 
     public function userRegister($user, $email, $password)

@@ -5,7 +5,6 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +19,6 @@ session_start();
     </script>
     <title>登入</title>
 </head>
-
 <body>
     <?php if (isset($_SESSION['userName'])) { ?>
         <div class="box">
@@ -51,5 +49,4 @@ session_start();
         </div>
     <?php } ?>
 </body>
-
 </html>

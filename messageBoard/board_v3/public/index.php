@@ -17,39 +17,39 @@ require_once '../vendor/autoload.php';
     <link rel="stylesheet" type="text/css" href="../css/practice.css">
 </head>
 <body>
-<!--    <header>-->
-<!--        <div class="container">-->
-<!--            <div>-->
-<!--                <nav class="navbar navbar-light bg-light">-->
-<!--                    <a class="navbar-brand" href="">-->
-<!--                        <span>留言板</span>-->
-<!--                    </a>-->
-<!--                    <ul class="drop-down">-->
-<!--                        <li>-->
-<!--                            <a>測試</a>-->
-<!--                            <ul>-->
-<!--                                <li>-->
-<!--                                    <a href="/message_board/user/CreateUser.php">創建使用者</a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a href="message_board/article/list.php">文章瀏覽</a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a href="">ftest3</a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a href="">ftest4</a>-->
-<!--                                </li>-->
-<!--                            </ul>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            test2-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                </nav>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </header>-->
+    <header>
+        <div class="container">
+            <div>
+                <nav class="navbar navbar-light bg-light">
+                    <a class="navbar-brand" href="">
+                        <span>留言板</span>
+                    </a>
+                    <ul class="drop-down">
+                        <li>
+                            <a>測試</a>
+                            <ul>
+                                <li>
+                                    <a href="/message_board/user/CreateUser.php">創建使用者</a>
+                                </li>
+                                <li>
+                                    <a href="message_board/article/list.php">文章瀏覽</a>
+                                </li>
+                                <li>
+                                    <a href="">ftest3</a>
+                                </li>
+                                <li>
+                                    <a href="">ftest4</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            test2
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
 <div>
     <div id="message">
 
