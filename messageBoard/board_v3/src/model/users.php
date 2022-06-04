@@ -34,4 +34,11 @@ class User
         $statement->execute([$user, $email, $password]);
         return $statement;
     }
+    public function findUser($userName)
+    {
+        $db = $this->dbConnect();
+        $statement = $db->prepare("SELECT * FROM users WHERE name=?");
+        $statement->execute([$userName]);
+        return $statement->fetch(PDO::FETCH_ASSOC);
+    }
 }

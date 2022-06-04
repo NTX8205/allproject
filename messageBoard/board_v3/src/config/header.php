@@ -1,49 +1,41 @@
 <?php
-
+session_start();
 ?>
+<!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
-    <title>留言板</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
-          crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
-            crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="../../css/practice.css">
 </head>
+
 <body>
-<header>
-    <div class="container">
-        <div>
-            <nav class="navbar navbar-light bg-light">
-                <a class="navbar-brand" href="">
-                    <span>留言板</span>
-                </a>
-                <ul class="drop-down">
-                    <li>
-                        <a>測試</a>
-                        <ul>
-                            <li>
-                                <a href="/replease/message_board/src/user/CreateUser.php">創建使用者</a>
-                            </li>
-                            <li>
-                                <a href="/replease/message_board/src/article/list.php">文章瀏覽</a>
-                            </li>
-                            <li>
-                                <a href="">ftest3</a>
-                            </li>
-                            <li>
-                                <a href="">ftest4</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        test2
-                    </li>
-                </ul>
-            </nav>
+    <header>
+        <div class="container">
+            <div>
+                <nav class="navbar navbar-light bg-light">
+                    <a class="navbar-brand" href="../article/list.php">
+                        <span>留言板</span>
+                    </a>
+                    <ul class="drop-down">
+                        <li>
+                            <?php if (isset($_SESSION['userName'])) { ?>
+                                <a href="../api/user/login.php">登出</a>
+                            <?php } else { ?>
+                                <a href="../user/login.php">登入</a>
+                            <?php } ?>
+                        </li>
+                        <li>
+                            <?php if (isset($_SESSION['userName'])) { ?>
+                                <h5><?php echo $_SESSION['userName'] ?></h5>
+                            <?php } else { ?>
+                                <a href="../user/register.php">註冊</a>
+                            <?php } ?>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-    </div>
-</header>
-
-
+    </header>

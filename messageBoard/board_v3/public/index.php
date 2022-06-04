@@ -17,7 +17,7 @@ require_once '../vendor/autoload.php';
     <link rel="stylesheet" type="text/css" href="../css/practice.css">
 </head>
 <body>
-    <header>
+    <!-- <header>
         <div class="container">
             <div>
                 <nav class="navbar navbar-light bg-light">
@@ -49,7 +49,7 @@ require_once '../vendor/autoload.php';
                 </nav>
             </div>
         </div>
-    </header>
+    </header> -->
 <div>
     <div id="message">
 

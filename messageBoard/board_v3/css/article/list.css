@@ -1,0 +1,31 @@
+.mes{
+    text-align: center;
+    align-items: center;
+    border:1px solid rgb(142, 189, 255);
+    border-radius: 20px;
+    vertical-align: middle;
+    background: #ffffff;
+}
+/*.btn-primary{*/
+/*    color:black;*/
+/*}*/
+
+.article-color:hover {
+    /*color: #fff;*/
+    background-color: #bbbbbb;
+    border-color: #bbbbbb;
+}
+
+.time{
+    color: #757575;
+    font-size: 80%;
+}
+.article{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.article-title{
+    margin:1rem;
+    margin-top: 0;
+}
