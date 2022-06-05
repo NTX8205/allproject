@@ -37,6 +37,9 @@ require('./functions/count.php');
                     <li class="nav-item ">
                         <input type="button" class="nav-link active link" onclick="javascript:location.href='coffee.php'" value="⌂夜景咖啡廳">
                     </li>
+                    <li class="nav-item ">
+                        <input type="button" class="nav-link active link" onclick="javascript:location.href='source.php'" value="關於">
+                    </li>
                 </ul>
             </div>
             <ul class="nav justify-content-end">

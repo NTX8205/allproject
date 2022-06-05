@@ -71,7 +71,7 @@
                 </a>
             </div>
             <div class="col-3">
-                <a href="web/index.html">
+                <a href="web/index.php">
                     報告
                 </a>
             </div>
