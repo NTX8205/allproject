@@ -2,6 +2,13 @@ ul {
     background-color: rgb(167, 231, 233);
 }
 
+.placeButton {
+    border: 2px rgb(69, 137, 139) solid;
+    color: rgb(255, 255, 255);
+    border-radius: 0px;
+    cursor: pointer;
+    background: rgb(119, 209, 212);
+}
 
 #buttonOn input {
     border: 2px rgb(69, 137, 139) solid;
@@ -11,13 +18,12 @@ ul {
     background: rgb(119, 209, 212);
 }
 
-
-
 table {
     border: 0;
     width: 100%;
     text-align: center;
     table-layout: fixed;
+    overflow-y: overlay;
 }
 
 caption {
