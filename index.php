@@ -68,8 +68,12 @@
             <div class="col-3">
                 <a href="messageboard/board_v3/src/article/list.php">
                     留言板v3
-                </a></div>
-            <div class="col-3">.col-sm-3</div>
+                </a>
+            </div>
+            <div class="col-3"><a href="web/index.html">
+                    報告
+                </a>
+            </div>
             <div class="col-3">.col-sm-3</div>
             <div class="col-3">.col-sm-3</div>
         </div>
