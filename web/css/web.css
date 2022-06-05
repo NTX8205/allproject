@@ -3,6 +3,11 @@
     margin: 0;
 }
 
+body {
+    min-height: 75rem;
+    padding-top: 4.5rem;
+}
+
 input {
     border: 0;
     background-color: #000000;
@@ -18,7 +23,7 @@ input:hover {
     background: rgb(119, 209, 212);
 }
 
-nav {
+input.link {
     float: left;
     display: block;
     padding: 20px;
@@ -33,9 +38,14 @@ nav {
     font-size: 17px
 }
 
-ul {
+nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+}
+
+.count {
+    font-size: 20px;
+    min-height: 10px;
 }

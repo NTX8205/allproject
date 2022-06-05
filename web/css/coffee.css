@@ -1,9 +1,9 @@
-ul {
+nav {
     background-color: rgb(40, 64, 143);
 }
 
 
-#buttonOn input {
+.onPage {
     border: 2px rgb(13, 19, 46) solid;
     color: rgb(255, 255, 255);
     border-radius: 0px;

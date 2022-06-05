@@ -29,7 +29,7 @@ section {
     background-repeat: no-repeat;
     max-width: 100%;
     user-select: none;
-    cursor: default;    
+    cursor: default;
     min-height: 50%;
     width: 100%;
 }
@@ -75,7 +75,7 @@ section {
     background: rgb(119, 209, 212);
 }
 
-ul {
+nav {
     background-color: rgb(167, 231, 233);
 }
 

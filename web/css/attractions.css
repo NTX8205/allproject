@@ -1,16 +1,10 @@
-ul {
+nav {
     background-color: rgb(167, 231, 233);
 }
 
-.placeButton {
-    border: 2px rgb(69, 137, 139) solid;
-    color: rgb(255, 255, 255);
-    border-radius: 0px;
-    cursor: pointer;
-    background: rgb(119, 209, 212);
-}
 
-#buttonOn input {
+
+.onPage {
     border: 2px rgb(69, 137, 139) solid;
     color: rgb(255, 255, 255);
     border-radius: 0px;
