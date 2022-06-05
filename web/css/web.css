@@ -18,11 +18,8 @@ input:hover {
     background: rgb(119, 209, 212);
 }
 
-li {
+nav {
     float: left;
-}
-
-li a {
     display: block;
     padding: 20px;
     padding-right: 40px;
