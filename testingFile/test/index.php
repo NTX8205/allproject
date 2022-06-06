@@ -1,7 +1,7 @@
 <?php
-
-echo "hi"
-
+$hello = "hello world";
+$world = "world hello";
+$bool = 1;
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +13,10 @@ echo "hi"
     <title>Document</title>
 </head>
 <body>
-    <p>hi in html</p>
+    <?php if ($bool == 2) {?>
+        <p><?php echo $hello?></p>
+    <?php } else {?>
+        <p><?php echo $world?></p>
+    <?php }?>
 </body>
 </html>

@@ -23,7 +23,8 @@ require('./functions/count.php');
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top " id="top">
+    <header id="top"></header>
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand text-white" href="index.php">帶你玩台中</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,7 +68,7 @@ require('./functions/count.php');
 
     </div>
 
-    <a type="button" href="#top" class="btn link gotop"> (つ´ω`)つ TOP </a>
+    <a type="button" href="#" class="btn-bd-primary link gotop text-black"> (つ´ω`)つ TOP </a>
 </body>
 
 </html>
