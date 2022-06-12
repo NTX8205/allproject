@@ -39,3 +39,6 @@ session_start();
             </div>
         </div>
     </header>
+    <div class="d-grid gap col-10 mx-auto container">
+        <a href="create.php" class="btn btn-outline-primary" type="button">創建文章</a>
+    </div>

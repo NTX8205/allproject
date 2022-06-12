@@ -8,8 +8,6 @@ use App\Model\User;
 require '../../model/users.php';
 require "../../model/articles.php";
 require '../../../vendor/autoload.php';
-
-
 $id = $_POST['id'];
 $article = new Article();
 $users = new User();

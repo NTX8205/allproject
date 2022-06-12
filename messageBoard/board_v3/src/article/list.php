@@ -11,9 +11,7 @@ $statement = $ArticleList->getAllArticle();
 
 <body>
 
-    <div class="d-grid gap col-10 mx-auto container">
-        <a href="create.php" class="btn btn-outline-primary" type="button">創建文章</a>
-    </div>
+    
     <div>
         <div class="article">
             <?php foreach ($statement as $row) { ?>
