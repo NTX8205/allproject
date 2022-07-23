@@ -1,0 +1,48 @@
+a{
+    text-decoration:none
+}
+.btn-light{
+    color: blue;
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+.mes{
+    text-align: center;
+    align-items: center;
+    border:1px solid rgb(142, 189, 255);
+    border-radius: 20px;
+    vertical-align: middle;
+    background: #ffffff;
+}
+/*.btn-primary{*/
+/*    color:black;*/
+/*}*/
+
+.article-color:hover {
+    /*color: #fff;*/
+    background-color: #bbbbbb;
+    border-color: #bbbbbb;
+}
+
+.time{
+    color: #757575;
+    font-size: 80%;
+}
+.article{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.article-title{
+    margin:0.5rem;
+    margin-top: 0;
+}
+
+.view {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    height: 100vh;
+    float: left;
+    box-sizing: border-box;
+}

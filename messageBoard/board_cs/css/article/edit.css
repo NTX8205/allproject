@@ -1,0 +1,20 @@
+.input-col-table {
+    width: 60%;
+    /*margin: 0 auto;*/
+}
+.label-col-table {
+    display: inline-block;
+    text-align:center;
+    width: 100%;
+}
+.article-title{
+    width: 100%;
+}
+.form{
+    width: 600px;
+    margin: 0 auto;
+}
+.card{
+    width: 800px;
+    margin: 0 auto;
+}

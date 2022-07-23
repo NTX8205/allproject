@@ -1,0 +1,14 @@
+.card{
+    width: 70%;
+    margin: auto;
+}
+.test{
+    border-bottom: 1px solid #6c6c6c;
+}
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}

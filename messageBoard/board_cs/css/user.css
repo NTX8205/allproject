@@ -1,0 +1,38 @@
+*{
+    font-family: 'Noto Sans TC', sans-serif;
+    
+}
+
+body{
+    background-color:#F0F0F0;
+}
+
+.box{
+    box-shadow: 8px 8px #ADADAD;
+    background-color:white;
+    margin: auto;
+    padding: auto;
+    width:50%;
+    margin-top: 10rem;
+    border: 2px solid;
+    border-radius:5px;
+    border-color: #46A3FF;
+    line-height: 1cm;
+    text-indent: 12px;
+    
+}
+h2.mb-3{
+    text-indent: 12px;
+    margin-top: 0.3rem;
+}
+input.form-control{
+    width: 90%;
+    margin-left: 5%;
+}
+.button{
+    text-align: center;
+}
+
+.register{
+    text-indent: 3px;
+}

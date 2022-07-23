@@ -1,0 +1,102 @@
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin: 0.5rem;
+}
+
+/*把所有的ul預設的內縮及樣式取消*/
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul.drop-down a {
+    background-color: #f8f9fa !important;
+    /*#f8f9fa!important*/
+    color: #333;
+    display: block;
+    padding: 0 30px;
+    text-decoration: none;
+    line-height: 40px;
+}
+
+nav ul.drop-down>li:last-child {
+    border-right: none;
+}
+
+nav ul.drop-down>li {
+    float: left;
+    /* 只有第一層是靠左對齊*/
+}
+
+nav ul.drop-down {
+    /*border: #ccc 1px solid;*/
+    display: inline-block;
+    /*font-family: 'Open Sans', Arial, sans-serif;*/
+    /*font-size: 13px;*/
+}
+
+nav ul.drop-down li {
+    position: relative;
+    white-space: nowrap;
+    border-right: #ccc 1px solid;
+}
+
+nav ul.drop-down li:hover>a {
+    /* 滑鼠移入次選單上層按鈕保持變色*/
+    background-color: #ef5c28;
+    color: #b04e4e;
+}
+
+nav ul.drop-down ul {
+    border: #ccc 1px solid;
+    position: absolute;
+    z-index: 99;
+    left: -1px;
+    top: 100%;
+    min-width: 180px;
+}
+
+nav ul.drop-down ul {
+    /*隱藏次選單*/
+    display: none;
+}
+
+nav ul.drop-down li:hover>ul {
+    /* 滑鼠滑入展開次選單*/
+    display: block;
+}
+
+nav ul.drop-down ul {
+    /*border: #ccc 1px solid;*/
+    position: absolute;
+    z-index: 99;
+    left: -1px;
+    top: 100%;
+    min-width: 180px;
+}
+
+nav ul.drop-down ul li {
+    border-bottom: #ccc 1px solid;
+}
+
+nav ul.drop-down ul li:last-child {
+    border-bottom: none;
+}
+
+nav ul.drop-down ul ul {
+    /*第三層以後的選單出現位置與第二層不同*/
+    z-index: 999;
+    top: 10px;
+    left: 90%;
+}
+
+nav>ul>li {
+    padding: 0 20px;
+    list-style: none;
+    display: inline-block;
+}
